@@ -1,0 +1,9 @@
+INSERT INTO lottery_basic.lottery_category (id, name, status, create_time, modify_time, summary) VALUES (1, '幸运5', 'Enable', '2020-06-19 08:24:22', '2020-06-19 08:24:22', '彩种大类:幸运5');
+INSERT INTO lottery_basic.lottery_category (id, name, status, create_time, modify_time, summary) VALUES (2, '赛车', 'Enable', '2020-06-19 08:25:47', '2020-06-19 08:25:47', '彩种大类:赛车');
+INSERT INTO lottery_basic.lottery_category (id, name, status, create_time, modify_time, summary) VALUES (3, '时时彩', 'Enable', '2020-06-19 08:28:03', '2020-06-19 08:28:03', '彩种大类:时时彩');
+INSERT INTO lottery_basic.lottery_category (id, name, status, create_time, modify_time, summary) VALUES (4, 'PC28', 'Enable', '2020-06-19 08:28:50', '2020-06-19 08:28:50', '彩种大类:PC28');
+INSERT INTO lottery_basic.lottery_category (id, name, status, create_time, modify_time, summary) VALUES (5, '六合彩', 'Enable', '2020-06-19 08:29:14', '2020-06-19 08:29:14', '彩种大类:六合彩');
+INSERT INTO lottery_basic.lottery_category (id, name, status, create_time, modify_time, summary) VALUES (6, '快乐8', 'Enable', '2020-06-19 08:29:52', '2020-06-19 08:29:52', '彩种大类:快乐8');
+INSERT INTO lottery_basic.lottery_category (id, name, status, create_time, modify_time, summary) VALUES (7, '11选5', 'Enable', '2020-06-19 08:30:26', '2020-06-19 08:30:26', '彩种大类:11选5');
+INSERT INTO lottery_basic.lottery_category (id, name, status, create_time, modify_time, summary) VALUES (8, '快乐十分', 'Enable', '2020-06-19 08:33:26', '2020-06-19 08:33:26', '彩种大类:快乐十分');
+INSERT INTO lottery_basic.lottery_category (id, name, status, create_time, modify_time, summary) VALUES (9, '快3', 'Enable', '2020-06-19 08:34:23', '2020-06-19 08:34:23', '彩种大类:快3');
