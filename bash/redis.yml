@@ -1,0 +1,11 @@
+#redis 启动  doker-compose -f redis.yml up -d
+version: '3'
+services:
+  redis:
+    restart: always
+    image: redis
+    container_name: redis
+    ports:
+      - 6379:6379
+    command:
+      redis-server  --appendonly yes

@@ -1,0 +1,14 @@
+#nacos 启动  doker-compose -f nacos.yml up -d
+version: '3'
+services:
+  nacos:
+    restart: always
+    image: nacos/nacos-server
+    container_name: nacos
+    environment:
+      MODE: standalone
+    ports:
+      - 8848:8848
+    labels:
+      - "traefik.http.routers.250.rule=Host(`nacos.250.com`)"
+      #nacos.250.com 为 traefik 路由的假域名，可以根据需要配置hosts

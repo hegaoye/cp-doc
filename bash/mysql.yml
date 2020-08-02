@@ -1,0 +1,12 @@
+version: '3'
+services:
+  mysql:
+    restart: always
+    image: hegaoye/mysql:1.0-beta
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 888888
+    ports:
+      - 3306:3306
+    command:
+      --lower_case_table_names=1

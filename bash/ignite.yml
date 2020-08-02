@@ -1,0 +1,9 @@
+version: '3'
+services:
+  ignite:
+    container_name: ignite
+    ports:
+      - 10800:10800
+    restart: always
+    image: apacheignite/ignite
+#    network_mode: "host"
