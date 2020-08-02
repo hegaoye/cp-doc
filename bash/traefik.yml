@@ -1,0 +1,20 @@
+version: '3'
+services:
+  traefik:
+    image: traefik:v2.1
+    container_name: traefik
+    command: --api.insecure=true --providers.docker
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+# 以下为demo
+  nginx:
+    restart: always
+    image: nginx
+    container_name: nginx
+    # 其中 n.a.com 为访问域名，无需设置端口开放给容器，traefik自动检测容器开放端口
+    labels:
+      - "traefik.http.routers.hegaoye.rule=Host(`n.a.com`)"
