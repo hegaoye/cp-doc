@@ -25,7 +25,7 @@ spec:
             - containerPort: 8080
           env:
             - name: host
-              value: "8.210.252.255:30306"
+              value: "mysql:3306"
             - name: username
               value: "root"
             - name: password
