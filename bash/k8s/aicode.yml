@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aicode
+  labels:
+    app: aicode
+spec:
+  selector:
+    matchLabels:
+      app: aicode
+  template:
+    metadata:
+      labels:
+        app: aicode
+    spec:
+      tolerations:
+        - key: node-role.kubernetes.io/master
+          operator: Exists
+          effect: NoSchedule
+      containers:
+        - name: aicode
+          image: hegaoye/aicode:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: host
+              value: "8.210.252.255:30306"
+            - name: username
+              value: "root"
+            - name: password
+              value: "888888"
+
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: aicode-svc
+spec:
+  ports:
+    - port: 8001
+      targetPort: 8080
+      nodePort: 30880
+  type: NodePort
+  selector:
+    app: aicode
